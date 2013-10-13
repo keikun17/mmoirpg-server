@@ -1,0 +1,9 @@
+%h2 Characters
+
+%table.table
+  - @characters.each do |character|
+    %tr
+      %td= character.name
+      %td= character.strength
+      %td= character.vitality
+

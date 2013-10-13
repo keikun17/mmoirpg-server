@@ -1,0 +1,12 @@
+= form_for @character do |f|
+  %p
+    Name
+    = f.text_field :name
+  %p
+    Strength
+    = f.text_field :strength
+  %p
+    Vitality
+    = f.text_field :vitality
+  %p
+    = f.submit "Save"
