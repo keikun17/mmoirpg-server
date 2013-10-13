@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20131013033225) do
 
-  create_table "characters_tables", force: true do |t|
+  create_table "characters", force: true do |t|
     t.integer "player_id"
     t.string  "name"
     t.integer "strength"
