@@ -12,7 +12,13 @@ class CharactersController < ApplicationController
 
   def create
     Character.create(character_params)
-    redirect_to :index
+    redirect_to characters_url
+  end
+
+  def destroy
+    @character = Character.find(params[:id])
+    @character.destroy
+    redirect_to characters_url
   end
 
   private
