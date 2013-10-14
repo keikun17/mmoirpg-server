@@ -1,8 +1,15 @@
 %h2 Characters
 
 %table.table
+  %tr
+    %th Id
+    %th Name
+    %th Strength
+    %th Vitality
+
   - @characters.each do |character|
     %tr
+      %td= character.id
       %td= character.name
       %td= character.strength
       %td= character.vitality
