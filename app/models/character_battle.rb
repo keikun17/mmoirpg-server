@@ -2,6 +2,7 @@ class CharacterBattle < ActiveRecord::Base
 
   belongs_to :battle
   belongs_to :character
+  belongs_to :opponent, class_name: "Character"
 
   delegate :name, to: :character, allow_nil: true, prefix: true
 
