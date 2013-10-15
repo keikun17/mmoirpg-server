@@ -1,7 +1,7 @@
 class Battle < ActiveRecord::Base
 
-  has_many :characters
   has_many :character_battles
+  has_many :characters, through: :character_battles
 
   def self.start
     battle = self.create
