@@ -1,4 +1,4 @@
-class Battle < ActiveRecord
+class Battle < ActiveRecord::Base
   has_many :characters
 
   def self.start
