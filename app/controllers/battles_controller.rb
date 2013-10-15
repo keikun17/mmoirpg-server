@@ -9,4 +9,15 @@ class BattlesController < ApplicationController
     redirect_to battles_path
   end
 
+  def show
+    @battle = Battle.find params[:id]
+  end
+
+  def destroy
+    @battle = Battle.find params[:id]
+    @battle.destroy
+
+    redirect_to battles_path
+  end
+
 end

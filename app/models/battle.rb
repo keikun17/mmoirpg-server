@@ -1,6 +1,6 @@
 class Battle < ActiveRecord::Base
 
-  has_many :character_battles
+  has_many :character_battles, dependent: :destroy
   has_many :characters, through: :character_battles
 
   def self.start

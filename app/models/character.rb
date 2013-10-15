@@ -1,5 +1,6 @@
 class Character < ActiveRecord::Base
 
+  has_many :character_battles, dependent: :destroy
 end
 
 # == Schema Information
