@@ -15,3 +15,13 @@ class Battle < ActiveRecord::Base
     )
   end
 end
+
+# == Schema Information
+#
+# Table name: battles
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#
+
