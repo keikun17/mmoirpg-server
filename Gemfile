@@ -10,6 +10,8 @@ gem 'sass-rails', '~> 4.0.0'
 
 gem 'annotate'
 
+gem 'draper'
+
 gem 'haml-rails'
 
 gem 'sidekiq'

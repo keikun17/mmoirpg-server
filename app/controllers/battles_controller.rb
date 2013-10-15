@@ -1,7 +1,7 @@
 class BattlesController < ApplicationController
 
   def index
-    @battles = Battle.all
+    @battles = Battle.all.decorate
   end
 
   def start
