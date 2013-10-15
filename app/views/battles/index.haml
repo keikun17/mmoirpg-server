@@ -1,9 +1,15 @@
 %h2 Battles
 
-= link_to "Start battle", '#', class: 'btn btn-primary'
+%p
+  = link_to "Start battle", start_battles_path, class: 'btn btn-primary'
 
-%table.table
-  - @battles.each do |battle|
+%p
+  %table.table
     %tr
-      %td= battle.created_at
+      %th ID
+      %th Started
+    - @battles.each do |battle|
+      %tr
+        %td= battle.id
+        %td= battle.created_at
 

@@ -4,4 +4,9 @@ class BattlesController < ApplicationController
     @battles = Battle.all
   end
 
+  def start
+    Battle.start
+    redirect_to battles_path
+  end
+
 end

@@ -1,8 +1,10 @@
 class Battle < ActiveRecord::Base
+
   has_many :characters
+  has_many :character_battles
 
   def self.start
-    battle = Battle.create
+    battle = self.create
 
     characters = Character.all
     characters.shuffle
@@ -10,9 +12,9 @@ class Battle < ActiveRecord::Base
     character_1 = characters.shift
     character_2 = characters.shift
 
-    PlayerBattle.create(
-      battle: battle, character_1: character_1, character_2: character_2
-    )
+    CharacterBattle.create( battle: battle, character: character_1)
+    CharacterBattle.create( battle: battle, character: character_2)
+
   end
 end
 
