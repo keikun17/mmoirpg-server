@@ -14,8 +14,8 @@ class Battle < ActiveRecord::Base
 
     CharacterBattle.create( battle: battle, character: character_1)
     CharacterBattle.create( battle: battle, character: character_2)
-
   end
+
 end
 
 # == Schema Information

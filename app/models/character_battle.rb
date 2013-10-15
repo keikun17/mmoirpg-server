@@ -3,6 +3,8 @@ class CharacterBattle < ActiveRecord::Base
   belongs_to :battle
   belongs_to :character
 
+  delegate :name, to: :character, allow_nil: true, prefix: true
+
 end
 
 # == Schema Information
