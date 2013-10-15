@@ -5,6 +5,7 @@ class CreateCharactersTable < ActiveRecord::Migration
       t.string :name
       t.integer :strength
       t.integer :vitality
+      t.timestamps
     end
   end
 end
