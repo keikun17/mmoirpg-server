@@ -1,0 +1,12 @@
+%h1 Result
+
+%table.table
+  %tr
+    %th Id
+    %th Character
+  - @battle.character_battles.decorate.each do |cb|
+    %tr
+      %td= cb.id
+      %td= cb.character_name
+      %td
+
