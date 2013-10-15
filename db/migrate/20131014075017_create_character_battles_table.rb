@@ -1,6 +1,6 @@
-class CreatePlayerBattlesTable < ActiveRecord::Migration
+class CreateCharacterBattlesTable < ActiveRecord::Migration
   def change
-    create_table :player_battles do |t|
+    create_table :character_battles do |t|
       t.references :character
       t.references :battle
       t.timestamps

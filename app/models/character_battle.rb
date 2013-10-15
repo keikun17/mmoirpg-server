@@ -1,4 +1,7 @@
-class PlayerBattle < ActiveRecord::Base
+class CharacterBattle < ActiveRecord::Base
+
+  belongs_to :battle
+  belongs_to :character
 
 end
 
