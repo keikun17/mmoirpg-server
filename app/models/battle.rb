@@ -9,11 +9,13 @@ class Battle < ActiveRecord::Base
     characters = Character.all
     characters.shuffle
 
-    character_1 = characters.shift
-    character_2 = characters.shift
+    while characters.size >= 2
+      character_1 = characters.shift
+      character_2 = characters.shift
+      CharacterBattle.create( battle: battle, character: character_1, opponent: character_2, win: false)
+      CharacterBattle.create( battle: battle, character: character_2, opponent: character_1, win: true)
+    end
 
-    CharacterBattle.create( battle: battle, character: character_1)
-    CharacterBattle.create( battle: battle, character: character_2)
   end
 
 end

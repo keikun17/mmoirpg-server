@@ -4,9 +4,10 @@
   %tr
     %th Id
     %th Character
+    %th Win?
   - @battle.character_battles.decorate.each do |cb|
     %tr
       %td= cb.id
       %td= cb.character_name
-      %td
+      %td= cb.win?
 
