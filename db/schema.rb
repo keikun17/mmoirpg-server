@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015120925) do
+ActiveRecord::Schema.define(version: 20131014075017) do
 
   create_table "battles", force: true do |t|
     t.datetime "created_at"
@@ -19,15 +19,12 @@ ActiveRecord::Schema.define(version: 20131015120925) do
   end
 
   create_table "character_battles", force: true do |t|
-    t.integer  "character_id"
+    t.integer  "winner_id"
+    t.integer  "loser_id"
     t.integer  "battle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "opponent_id"
-    t.boolean  "win"
   end
-
-  add_index "character_battles", ["opponent_id"], name: "index_character_battles_on_opponent_id", using: :btree
 
   create_table "characters", force: true do |t|
     t.integer  "player_id"

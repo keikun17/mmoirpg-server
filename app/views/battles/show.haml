@@ -3,11 +3,11 @@
 %table.table
   %tr
     %th Id
-    %th Character
-    %th Win?
+    %th Win
+    %th Loss
   - @battle.character_battles.decorate.each do |cb|
     %tr
       %td= cb.id
-      %td= cb.character_name
-      %td= cb.win?
+      %td= cb.winner_name
+      %td= cb.loser_name
 

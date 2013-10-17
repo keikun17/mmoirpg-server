@@ -8,12 +8,12 @@
     %tr
       %th ID
       %th Started
-      %th Character count
+      %th Match count
       %th
     - @battles.each do |battle|
       %tr
         %td= battle.id
         %td= link_to battle.created_at, battle
-        %td= battle.characters.count
+        %td= battle.character_battles.count
         %td= link_to "delete", battle, method: :delete, confirm: 'Delete?'
 
